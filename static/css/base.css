@@ -1,0 +1,53 @@
+
+:root {
+    /* Fonts */
+    --main-font: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+
+    /* Colours */
+    --background: #f2f2f2;
+    --black: #000;
+    --white: #fff;
+    --off-white: #f6f6f6;
+    --blue: #0d99fd;
+
+    /* Utils */
+    --small-box-shadow: 1px -1px 7px 0 #000000;
+    --border: 1px solid #000000c7;
+}
+
+html, body{
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: var(--white);
+}
+
+#logo-img {
+    height: 85px;
+
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+}
+
+/* Header */
+.navbar{
+    background-color: var(--off-white);
+    box-shadow: var(--small-box-shadow);
+}
+
+a.nav-link {
+    color: var(--black);
+}
+    
+  
