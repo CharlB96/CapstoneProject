@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     # Apps
 
     'home',
+    'suggestion',
 ]
 
 SITE_ID = 1

@@ -5,7 +5,7 @@
 
     /* Colours */
     --background: #f2f2f2;
-    --black: #000;
+    --black: #000000e2;
     --white: #fff;
     --off-white: #f6f6f6;
     --blue: #0d99fd;
@@ -46,7 +46,7 @@ footer {
 
 .footer-items {
     text-align: center;
-    background-color: black;
+    background-color: var(--black);
     color: aliceblue;
     padding-top: 10px;
 }
