@@ -30,9 +30,9 @@ main {
     background-color: var(--white);
 }
 
-#logo-img {
-    height: 85px;
-
+a {
+    text-decoration: none;
+    color: var(--black);
 }
 
 /* Footer */
@@ -40,14 +40,70 @@ footer {
     flex-shrink: 0;
 }
 
+.footer-container {
+    padding: 0;
+}
+
+.footer-items {
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    padding-top: 10px;
+}
+
+.footer-items span {
+    font-size: 20px;
+}
+
+.copyright {
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+
+.footer-list i {
+    font-size: 40px;
+    color: aliceblue;
+}
+
+.footer-list .fa-square-facebook:hover {
+    color: rgba(98, 114, 237, 0.905);
+    transition: 0.5s;
+}
+
+.footer-list .fa-square-twitter:hover {
+    color: rgba(63, 193, 248, 0.905);
+    transition: 0.5s
+}
+
+.footer-list .fa-instagram:hover {
+    color: rgba(159, 25, 208, 0.905);
+    transition: 0.5s;
+}
+
 /* Header */
 .navbar{
-    background-color: var(--off-white);
+    background-color: var(--black);
     box-shadow: var(--small-box-shadow);
 }
 
 a.nav-link {
-    color: var(--black);
+    color: var(--off-white);
 }
+
+a.nav-link:hover {
+    color: rgb(168, 168, 168);
+    transition: 0.5s;
+}
+
+.btn-outline-success {
+    color: var(--white);
+}
+
+#logo-img {
+    height: 100px;
+}
+
+/* Sign in/Sign up */
+
     
   
