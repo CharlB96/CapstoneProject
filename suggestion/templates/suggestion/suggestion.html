@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Make a suggestion {% endblock %}
+
+{% block content %}
+<div class="container">
+    <form action="POST" enctype="multipart/form-data" class="p2 form">
+        <h1 class="text-center">Make your suggestion here</h1>
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form|crispy }}
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

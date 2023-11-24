@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Suggest(models.Model):
+class Suggestion(models.Model):
     """
     A model for users to submit suggestions for animals to include on the site
     """

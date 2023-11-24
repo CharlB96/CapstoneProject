@@ -1,3 +1,36 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <h1>Hello, and welcome to:</h1>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <img class="img-fluid logo-front"
+                src="{% static 'images/obscuripedia-high-resolution-logo-transparent.png' %}" alt="Obscuripedia logo">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5">
+            <h3>Want to see obscure animals from across the planet? Well, thats what obscuripedia is for!</h3>
+            <hr>
+            <p>Here at Obscuripedia, we collect info on the most obscure animals we can find. Feel free to browse at
+                your leisure, or register with the site to suggest new animals we may have missed.
+                Have fun!
+            </p>
+        </div>
+        <div class="col-2"> </div>
+        <div class="col-5">
+            <h3>If you are interested in joining us in our knowledge quest:
+                Register here!</h3>
+                <hr>
+            <a class="{% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_signup' %}">Register</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

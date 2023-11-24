@@ -81,6 +81,7 @@ footer {
 }
 
 /* Header */
+
 .navbar{
     background-color: var(--black);
     box-shadow: var(--small-box-shadow);
@@ -103,7 +104,15 @@ a.nav-link:hover {
     height: 100px;
 }
 
+/* Index page */
+
+.logo-front {
+    height: 400px;
+}
+
+
 /* Sign in/Sign up */
+
 
     
   
