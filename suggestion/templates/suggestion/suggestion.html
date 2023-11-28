@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="container">
-    <form action="POST" enctype="multipart/form-data" class="p2 form">
+    <form method="POST" action="{% url 'suggestion' %}" enctype="multipart/form-data" class="p2 form">
         <h1 class="text-center">Make your suggestion here</h1>
         {% csrf_token %}
         {{ form.media }}

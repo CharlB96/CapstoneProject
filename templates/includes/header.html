@@ -19,6 +19,9 @@
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_logout' %}">Logout</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == suggestion_url %}active{% endif %}" href="{% url 'suggestion' %}">Make a suggestion</a>
+                    </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
@@ -31,9 +34,6 @@
                     {% endif %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == newsletter_url %}active{% endif %}" href="#">Take a look at our newsletter!</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == suggestion_url %}active{% endif %}" href="{% url 'suggestion' %}">Make a suggestion</a>
                     </li>
                 </ul>
                 <!-- Form for search bar -->
