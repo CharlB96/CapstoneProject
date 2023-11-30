@@ -27,8 +27,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ 
 
-ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com']
-CSRF_TRUSTED_ORIGINS =  ['https://*.gitpod.io']
+ALLOWED_HOSTS = ['8000-charlb96-capstoneprojec-scw09c76dnd.ws-eu106.gitpod.io', '.herokuapp.com']
+CSRF_TRUSTED_ORIGINS =  ['https://8000-charlb96-capstoneprojec-scw09c76dnd.ws-eu106.gitpod.io']
 
 
 # Application definition
@@ -60,8 +60,8 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = 'logged_in_home'
-LOGOUT_REDIRECT_URL = 'home_logged_out'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
