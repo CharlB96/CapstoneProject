@@ -27,8 +27,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ 
 
-ALLOWED_HOSTS = ['8000-charlb96-capstoneprojec-scw09c76dnd.ws-eu106.gitpod.io', '.herokuapp.com']
-CSRF_TRUSTED_ORIGINS =  ['https://8000-charlb96-capstoneprojec-scw09c76dnd.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com']
+CSRF_TRUSTED_ORIGINS =  ['https://*.gitpod.io']
 
 
 # Application definition
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
     'home',
     'suggestion',
+    'pedia',
 
     # Other
     'crispy_forms',
