@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# Create your views here.
+
+class Article(TemplateView):
+    template_name = 'pedia/pedia.html'

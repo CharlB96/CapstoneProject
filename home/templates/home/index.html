@@ -16,7 +16,7 @@
     {% if user.is_authenticated %}
     <div class="row">
         <div class="col-12 d-flex justify-content-center mb-4">
-            <h2>Start your knowledge quest <a href=#><em>here</em></a></h2>
+            <h2>Start your knowledge quest <a href={% url 'pedia'%}><em>here</em></a></h2>
         </div>
     </div>
     {% else %}
