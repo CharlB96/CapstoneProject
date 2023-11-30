@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from .models import Article
 
 
-class Article(TemplateView):
-    template_name = 'pedia/pedia.html'
+def article_view(request):
+    article_items = Article.objects.all()
+    return render(request, 'pedia/pedia.html', {'article_items': article_items})

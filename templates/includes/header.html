@@ -3,7 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'account_logout' as logout_url %}
 {% url 'suggestion' as suggestion_url %}
-{% url 'pedia' as pedia_url %}
+{% url 'article_view' as article_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url%}
 {% url 'newsletter' as newsletter_url%}
@@ -31,7 +31,7 @@
                         <a class="nav-link {% if request.path == suggestion_url %}active{% endif %}" href="{% url 'suggestion' %}">Make a suggestion</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == pedia_url %}active{% endif %}" href="{% url 'pedia' %}">Lets see them animals!</a>
+                        <a class="nav-link {% if request.path == article_url %}active{% endif %}" href="{% url 'article_view' %}">Lets see them animals!</a>
                     </li>
                     {% else %}
                     <li class="nav-item">

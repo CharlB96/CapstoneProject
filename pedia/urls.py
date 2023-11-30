@@ -1,6 +1,6 @@
 from django.urls import path 
-from .views import Article
+from .views import article_view
 
 urlpatterns = [
-    path('', Article.as_view(), name='pedia')
+    path('', article_view, name='article_view')
 ]

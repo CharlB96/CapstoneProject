@@ -36,3 +36,5 @@ User story 8: As a user, I want the website to be accessible and responsive on v
 ### Media references
 
 - Logo: Logo created using logo maker on YourLogo.com
+
+- Images: Placeholder image sourced from Pixabay.com from user Piyapong89
