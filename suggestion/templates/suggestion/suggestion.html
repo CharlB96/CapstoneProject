@@ -4,7 +4,7 @@
 {% block title %} Make a suggestion {% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container d-flex justify-content-center">
     <form method="POST" action="{% url 'suggestion' %}" enctype="multipart/form-data" class="p2 form">
         <h1 class="text-center">Make your suggestion here</h1>
         {% csrf_token %}

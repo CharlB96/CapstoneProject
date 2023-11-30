@@ -13,6 +13,13 @@
                 src="{% static 'images/obscuripedia-high-resolution-logo-transparent.png' %}" alt="Obscuripedia logo">
         </div>
     </div>
+    {% if user.is_authenticated %}
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center mb-4">
+            <h2>Start your knowledge quest <a href=#><em>here</em></a></h2>
+        </div>
+    </div>
+    {% else %}
     <div class="row">
         <div class="col-5">
             <h3>Want to see obscure animals from across the planet? Well, thats what obscuripedia is for!</h3>
@@ -30,6 +37,7 @@
             <a class="{% if request.path == signup_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_signup' %}">Register</a>
         </div>
+    {% endif %}
     </div>
 </div>
 
