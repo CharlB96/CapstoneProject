@@ -9,9 +9,9 @@
         <div class="col-md-4 mb-4">
             <div class="card" style="width: 18rem;">
                 {% if "placeholder" in article.image.url %}
-                <img class="card-img-top" src="{% static 'images/placeholder.png' %}" alt="placeholder image">
+                <img class="card-img-top card-img-custom" src="{% static 'images/placeholder.png' %}" alt="placeholder image">
                 {% else %}
-                <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.image_alt }}">
+                <img src="{{ article.image.url }}" class="card-img-top card-img-custom" alt="{{ article.image_alt }}">
                 {% endif %}
                 <hr>
                 <div class="card-body">

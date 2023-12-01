@@ -111,8 +111,11 @@ a.nav-link:hover {
 }
 
 
-/* Sign in/Sign up */
+/* Articles page */
 
-
+.card-img-custom {
+    height: 200px;
+    object-fit: cover;
+}
     
   
