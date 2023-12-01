@@ -39,3 +39,4 @@ User story 8: As a user, I want the website to be accessible and responsive on v
 
 - Images: Placeholder image sourced from Pixabay.com from user Piyapong89
           Echidna image sourced from https://www.edgeofexistence.org/blog/the-search-for-payangko-finding-attenboroughs-long-beaked-echidna/
+          Tenrec image sourced from https://www.flickr.com/photos/hakoar/7814268658

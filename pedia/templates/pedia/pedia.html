@@ -16,14 +16,15 @@
                 <hr>
                 <div class="card-body">
                     <h4 class="card-title">{{ article.animal_name }}</h4>
-                    <br>
+                    <h5>{{ article.binomial_name }}</h5>
+                    <hr>
                     <p class="card-text">Location: {{ article.location }}</p>
                     <p class="card-text">Dietary needs: {{ article.diet }}</p>
-                    <a href="#" class="btn btn-primary">Click here to know more</a>
+                    <a href="#" class="btn btn-primary">Click here to find out more</a>
                 </div>
             </div>
         </div>
-        {% endfor %}
+            {% endfor %}
     </div>
 </div>
 
