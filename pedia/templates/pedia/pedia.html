@@ -20,7 +20,7 @@
                     <hr>
                     <p class="card-text">Location: {{ article.location }}</p>
                     <p class="card-text">Dietary needs: {{ article.diet }}</p>
-                    <a href="#" class="btn btn-primary">Click here to find out more</a>
+                    <a href="{% url 'article_detail' article.id %}" class="btn btn-primary">Click here to find out more</a>
                 </div>
             </div>
         </div>
