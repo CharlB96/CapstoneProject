@@ -118,4 +118,10 @@ a.nav-link:hover {
     object-fit: cover;
 }
     
-  
+.article-image {
+    height: 300px;
+}
+
+.description {
+    padding-top: 50px;
+}

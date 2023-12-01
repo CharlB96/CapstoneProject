@@ -3,4 +3,28 @@
 
 {% load static %}
 
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            {% if "placeholder" in article.image.url %}
+            <img class="article-image img-fluid" src="{% static 'images/placeholder.png' %}" alt="placeholder image">
+            {% else %}
+            <img class="article-image img-fluid" src="{{ article.image.url }}" alt="{{ article.image_alt }}">
+            {% endif %}
+        </div>
+        <div class="col-8 description">
+            <p>{{ article.description }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4 class="">{{ article.animal_name }}</h4>
+            <h5>{{ article.binomial_name }}</h5>
+            <hr>
+            <p class="">Location: {{ article.location }}</p>
+            <p class="">Dietary needs: {{ article.diet }}</p>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
