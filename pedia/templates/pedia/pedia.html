@@ -3,6 +3,28 @@
 
 {% block content %}
 
-
+<div class="container">
+    <div class="row">
+        {% for article in article_items %}
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                {% if "placeholder" in article.image.url %}
+                <img class="card-img-top" src="{% static 'images/placeholder.png' %}" alt="placeholder image">
+                {% else %}
+                <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.image_alt }}">
+                {% endif %}
+                <hr>
+                <div class="card-body">
+                    <h4 class="card-title">{{ article.animal_name }}</h4>
+                    <br>
+                    <p class="card-text">Location: {{ article.location }}</p>
+                    <p class="card-text">Dietary needs: {{ article.diet }}</p>
+                    <a href="#" class="btn btn-primary">Click here to know more</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}

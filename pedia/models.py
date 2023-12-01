@@ -8,10 +8,12 @@ class Article(models.Model):
     """
     user = models.ForeignKey(User, related_name="author", on_delete=models.CASCADE)
     image = CloudinaryField('image', default='placeholder')
+    image_alt = models.CharField(max_length=50, null=False, blank=False, default="image")
     animal_name = models.CharField(max_length=50, null=False, blank=False)
+    binomial_name = models.CharField(max_length=50, null=False, blank=False, default="(Genus) (Species)")
     location = models.CharField(max_length=50, null=False, blank=False)
     diet = models.CharField(max_length=30, null=False, blank=False)
-    description = models.TextField(max_length=200, null=False, blank=False)
+    description = models.TextField(null=False, blank=False)
     post_date = models.DateTimeField(auto_now=True)
 
     class Meta:
