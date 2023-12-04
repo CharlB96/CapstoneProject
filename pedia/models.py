@@ -23,4 +23,4 @@ class Article(models.Model):
         ordering = ['post_date']
 
     def __str__(self):
-        return str(self.animal_name)
+        return f"{self.animal_name} - {self.binomial_name}"
