@@ -6,25 +6,30 @@
 <div class="container">
     <div class="row">
         {% for article in article_items %}
-        <div class="col-md-3 mb-4">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4 d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
                 {% if "placeholder" in article.image.url %}
-                <img class="card-img-top card-img-custom" src="{% static 'images/placeholder.png' %}" alt="placeholder image">
+                <img class="card-img-top card-img-custom" src="{% static 'images/placeholder.png' %}"
+                    alt="placeholder image">
                 {% else %}
                 <img src="{{ article.image.url }}" class="card-img-top card-img-custom" alt="{{ article.image_alt }}">
                 {% endif %}
-                <hr>
-                <div class="card-body">
-                    <h4 class="card-title">{{ article.animal_name }}</h4>
-                    <h5>{{ article.binomial_name }}</h5>
-                    <hr>
-                    <p class="card-text">Location: {{ article.location }}</p>
-                    <p class="card-text">Dietary needs: {{ article.diet }}</p>
-                    <a href="{% url 'article_detail' article.id %}" class="btn btn-primary">Click here to find out more</a>
+                <div class="card d-flex flex-column">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ article.animal_name }}</h4>
+                        <h5>{{ article.binomial_name }}</h5>
+                        <hr>
+                        <p class="card-text">Location: {{ article.location }}</p>
+                        <p class="card-text">Dietary needs: {{ article.diet }}</p>
+                        <div class="mt-auto">
+                            <a href="{% url 'article_detail' article.id %}" class="btn btn-primary">Click here to find
+                                out more</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-            {% endfor %}
+        {% endfor %}
     </div>
 </div>
 

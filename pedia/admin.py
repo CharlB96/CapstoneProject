@@ -11,4 +11,5 @@ class ArticleAdmin(admin.ModelAdmin):
         'diet',
         'description',
         'post_date',
+        'map',
     )

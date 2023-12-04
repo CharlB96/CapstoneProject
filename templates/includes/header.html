@@ -9,10 +9,10 @@
 {% url 'newsletter' as newsletter_url%}
 
 <header>
-    <nav class="navbar navbar-expand-lg">
-        <div  class="container-fluid"> 
-            <a class="navbar-brand" href="{% url 'home' %}"><img id="logo-img" src="{% static 'images/obscuripedia-high-resolution-logo-transparent.png'%}"
-                    alt="Bidove logo"></a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><img id="logo-img"
+                    src="{% static 'images/obscuripedia-high-resolution-logo-transparent.png'%}" alt="Obscuripedia logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"  href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -28,10 +29,12 @@
                             href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == suggestion_url %}active{% endif %}" href="{% url 'suggestion' %}">Make a suggestion</a>
+                        <a class="nav-link {% if request.path == suggestion_url %}active{% endif %}"
+                            href="{% url 'suggestion' %}">Make a suggestion</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == article_url %}active{% endif %}" href="{% url 'article_view' %}">Lets see them animals!</a>
+                        <a class="nav-link {% if request.path == article_url %}active{% endif %}"
+                            href="{% url 'article_view' %}">Lets see them animals!</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -44,7 +47,8 @@
                     </li>
                     {% endif %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == newsletter_url %}active{% endif %}" href="#">Take a look at our newsletter!</a>
+                        <a class="nav-link {% if request.path == newsletter_url %}active{% endif %}" href="#">Take a
+                            look at our newsletter!</a>
                     </li>
                 </ul>
                 <!-- Form for search bar -->
