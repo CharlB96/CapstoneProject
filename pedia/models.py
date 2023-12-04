@@ -17,6 +17,7 @@ class Article(models.Model):
     post_date = models.DateTimeField(auto_now=True)
     map = CloudinaryField('map', default='placeholder-map')
     map_alt = models.CharField(max_length=50, null=False, blank=False, default="map")
+    approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['post_date']
