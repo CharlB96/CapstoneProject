@@ -33,6 +33,13 @@ User story 8: As a user, I want the website to be accessible and responsive on v
 
 ![](https://lh7-us.googleusercontent.com/BrwYA3sfqx6182OpQmLq6vLs7TVxEU4sPtwFfojctw4t4rENLd7YlrSG1vJnIc6dhgBt6EeFjNvDdRd3xCBR0PW-FfJnsYww7yYCUn7q56arKZI1AHAbEBUR_frphiABnWpSIkkjiZTs-dK6qhXl95c)
 
+### Bugs
+
+Dealt with various issues during develpoment including:
+    - Issue loading page; forgot to migrate after changing model
+    - Difficulty getting responsiveness; had to experiment with bootstrap classes until it was right
+    - Images not uploading when using form; added request.FILES to view
+
 ### Media references
 
 - Logo: Logo created using logo maker on YourLogo.com

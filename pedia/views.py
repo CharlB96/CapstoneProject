@@ -27,7 +27,7 @@ def add_article(request):
         return redirect('login')
 
     if request.method == "POST":
-        article_form = AddArticleForm(request.POST)
+        article_form = AddArticleForm(request.POST, request.FILES)
         if article_form.is_valid():
             article = article_form.save(commit=False)
             article.user = request.user
