@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 card mb-5 mt-5">
+            <div class="card-body">
+                <h3>{% if article_form.instance.pk %}Edit Article{% else %}Add Article{% endif %}</h3>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ article_form | crispy }}
+                    <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

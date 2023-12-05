@@ -40,3 +40,68 @@ def add_article(request):
         article_form = AddArticleForm()
 
     return render(request, 'pedia/add_article.html', {'article_form': article_form})
+
+
+def edit_article(request, article_id=None):
+    """
+    View to add or edit an article
+    """
+    if not request.user.is_authenticated:
+        messages.error(request, 'You must be at least an admin to edit an article.')
+        return redirect('login')
+
+    if article_id:
+        article = get_object_or_404(Article, id=article_id)
+        if article.user != request.user:
+            messages.error(request, 'You do not have permission to edit this article.')
+            return redirect('article_view')
+        else:
+            article_form = AddArticleForm(request.POST or None, request.FILES or None, instance=article)
+    else:
+        article = Article()
+        article_form = AddArticleForm(request.POST or None, request.FILES or None, instance=article)
+
+    new_image = request.FILES.get('image')
+    if new_image:
+        article.image = new_image
+
+    if request.method == "POST":
+        if article_form.is_valid():
+            article = article_form.save(commit=False)
+            article.user = request.user
+            article.save()
+            messages.success(request, 'Article updated successfully')
+            return redirect('article_detail', article_id=article.id)
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating article')
+
+    return render(request, 'pedia/add_article.html', {'article_form': article_form})
+
+
+
+def delete_article(request, article_id=None):
+    """
+    View for deleting articles
+    """
+    if not request.user.is_authenticated:
+        messages.error(request, 'You must be at least an admin to delete an article.')
+        return redirect('login')
+
+    if article_id:
+        article = get_object_or_404(Article, id=article_id)
+        if article.user != request.user:
+            messages.error(request, 'You do not have permission to edit this article.')
+            return redirect('article_view')
+        else:
+            article_form = AddArticleForm(request.POST or None, request.FILES or None, instance=article)
+    else:
+        article = Article()
+        article_form = AddArticleForm(request.POST or None, request.FILES or None, instance=article)
+
+    if article.user == request.user:
+        article.delete()
+        messages.success(request, 'Article deleted.')
+    else:
+        messages.error(request, 'You can only delete your own article.')
+
+    return redirect('article_view')

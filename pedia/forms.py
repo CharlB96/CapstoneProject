@@ -19,3 +19,12 @@ class AddArticleForm(forms.ModelForm):
             'map': 'Add map of location',
             'map_alt': 'Describe map briefly'
         }
+
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            if self.instance and self.instance.pk:
+                self.fields['image'].initial = self.instance.image.url
+                self.fields['image'].required = False
+            else:
+                self.fields['image'].required = True   
+                self.fields['image'].initial = 'default_image_url'
