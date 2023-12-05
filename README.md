@@ -39,6 +39,7 @@ Dealt with various issues during develpoment including:
     - Issue loading page; forgot to migrate after changing model
     - Difficulty getting responsiveness; had to experiment with bootstrap classes until it was right
     - Images not uploading when using form; added request.FILES to view
+    - Internal server error when deploying to heroku; commented out the STATIC_FILE_STORAGE in settings.py
 
 ### Media references
 
