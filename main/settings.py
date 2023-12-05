@@ -25,11 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEVELOPMENT' in os.environ 
-DEBUG = False
+DEBUG = 'DEVELOPMENT' in os.environ 
 
-ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com']
-CSRF_TRUSTED_ORIGINS =  ['https://*.gitpod.io']
+
+ALLOWED_HOSTS = ['.gitpod.io', 'capstone-project-obscuripedia-43e18bf1264b.herokuapp.com']
+CSRF_TRUSTED_ORIGINS =  ['https://*.gitpod.io', 'https://*.herokuapp.com']
 
 
 # Application definition
