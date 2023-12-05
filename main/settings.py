@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = 'DEVELOPMENT' in os.environ 
 
 
-ALLOWED_HOSTS = ['.gitpod.io', 'capstone-project-obscuripedia-43e18bf1264b.herokuapp.com']
+ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com']
 CSRF_TRUSTED_ORIGINS =  ['https://*.gitpod.io', 'https://*.herokuapp.com']
 
 
@@ -165,7 +165,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Cloudinary
 
