@@ -72,7 +72,9 @@ Dealt with various issues during develpoment including:
         ![Image showing no issues with css validation](image.png)
 
 - Testing:
-       https://docs.google.com/document/d/1fxGQ2t37Pz854mK3BgLMoRH8PplrdpIK7yQzlYmHDnU/edit?usp=sharing
+        Testing of the views was done consistently throughout. When signed out, only the home, login, register, and inactive newsletter pages are visible. When logged in, the home, suggestion, 'lets see them animals', log out and inactive newsletter pages are active. When accessing the articles page, the add article button is visible whether logged in or not, however, if you try to press the button and are not logged in, an error will appear saiyng you need to be at least an admin to add an aarticle and you will be taken back to the articles page.
+        When logged in (as staff) the add article button takes you to a form with all the relevant fields to fill in. 
+        https://docs.google.com/document/d/1fxGQ2t37Pz854mK3BgLMoRH8PplrdpIK7yQzlYmHDnU/edit?usp=sharing
 
 - Acknowledgements:
         ChatGPT was used throughout to identify issues in the code (Spelling mistakes, Structrual issues, etc)
@@ -81,3 +83,5 @@ Dealt with various issues during develpoment including:
         The site could definitely use some expanding in the number of articles made, as well as the amount of information on each animal. Due to time constraints, I created a few articles with limited information, the majority of which was sourced directly from wikipedia. I would want to create fully unique articles per animal and structure the pages with rich text fields to add a bit more style.
 
         I would want to fully construct the newsletter page and the newsletter itself, possibly to open onto a new page.
+
+        I would want to create a profile page where you can save articles of your favourtite animals and personalise the page somewhat.
