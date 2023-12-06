@@ -1,4 +1,15 @@
 
+# Welcome to Obscuripedia!
+
+[Obscuripedia logo](static/images/obscuripedia-high-resolution-logo-transparent.png)
+
+## About
+
+This site was created as a final project for the Code institute 16 week full stack developer course. The full code can be found on GitHub here: https://github.com/CharlB96/CapstoneProject-Obscuripedia
+
+Obscuripedia is intended to document and display information regarding obscure and often overlooked creatures from across the planet. The site is constructed to have any visitor be able to sign up, log in, and log out with ease. The articles are displayed once you are logged in and the search bar can be used to filter the articles. Although the edit-article and add-article buttons appear certain pages, only those designated as staff can add and edit, plus only the staff who created the articles can edit them as well as delete. 
+There is also a section for suggestions, which can be made by any user that is logged in. The articles page shows eight articles per page and is paginated so that articles can be continuously added to the site.  
+
 ### User stories
 
 User Story 1: As an animal enthusiast, I want to see obscure animals laid out in an easily readable way so that I can learn new information about creatures i have not heard of before without having to scour a huge article.
@@ -33,7 +44,7 @@ User story 8: As a user, I want the website to be accessible and responsive on v
 
 ![](https://lh7-us.googleusercontent.com/BrwYA3sfqx6182OpQmLq6vLs7TVxEU4sPtwFfojctw4t4rENLd7YlrSG1vJnIc6dhgBt6EeFjNvDdRd3xCBR0PW-FfJnsYww7yYCUn7q56arKZI1AHAbEBUR_frphiABnWpSIkkjiZTs-dK6qhXl95c)
 
-### Bugs
+### Major Bugs
 
 Dealt with various issues during develpoment including:
     - Issue loading page; forgot to migrate after changing model
@@ -59,3 +70,14 @@ Dealt with various issues during develpoment including:
 - Validation:
         The large amount of warnings are all due to bootstrap classes
         ![Image showing no issues with css validation](image.png)
+
+- Testing:
+       https://docs.google.com/document/d/1fxGQ2t37Pz854mK3BgLMoRH8PplrdpIK7yQzlYmHDnU/edit?usp=sharing
+
+- Acknowledgements:
+        ChatGPT was used throughout to identify issues in the code (Spelling mistakes, Structrual issues, etc)
+
+- Future plans:
+        The site could definitely use some expanding in the number of articles made, as well as the amount of information on each animal. Due to time constraints, I created a few articles with limited information, the majority of which was sourced directly from wikipedia. I would want to create fully unique articles per animal and structure the pages with rich text fields to add a bit more style.
+
+        I would want to fully construct the newsletter page and the newsletter itself, possibly to open onto a new page.
