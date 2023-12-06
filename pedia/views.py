@@ -3,13 +3,31 @@ from .models import Article
 from .forms import AddArticleForm
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 
 
 def article_view(request):
     """ 
     View to display articles
     """
-    article_items = Article.objects.filter(approved=True)
+    query = request.GET.get('q')
+
+    if query:
+        article_items = Article.objects.filter(
+            Q(animal_name__icontains=query) | 
+            Q(binomial_name__icontains=query) |
+            Q(location__icontains=query) |
+            Q(diet__icontains=query) |
+            Q(description__icontains=query),
+            approved=True
+        )
+        
+        if not article_items.exists():
+            messages.warning(request, 'No results found for the search query.')
+            
+    else:
+        article_items = Article.objects.filter(approved=True)
+
     items_per_page = 8
     paginator = Paginator(article_items, items_per_page)
     page = request.GET.get('page')
@@ -22,6 +40,7 @@ def article_view(request):
         article_items = paginator.page(paginator.num_pages)
 
     return render(request, 'pedia/pedia.html', {'article_items': article_items})
+
 
 def article_detail(request, article_id):
     """

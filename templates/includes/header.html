@@ -52,8 +52,8 @@
                     </li>
                 </ul>
                 <!-- Form for search bar -->
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" method="GET" action="{% url 'article_view' %}">
+                    <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
