@@ -54,6 +54,10 @@ a {
     color: var(--black);
 }
 
+.alert {
+    margin-bottom: 0;
+}
+
 /* Footer */
 footer {
     flex-shrink: 0;
@@ -146,6 +150,7 @@ a.nav-link:hover {
     
 .article-image {
     height: 300px;
+    width: fit-content;
 }
 
 .butt {

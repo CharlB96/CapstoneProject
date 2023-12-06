@@ -12,10 +12,12 @@
             <img class="article-image img-fluid" src="{{ article.image.url }}" alt="{{ article.image_alt }}">
             {% endif %}
         </div>
-        <div class="col-12 col-lg-7 order-2 order-lg-1 align-self-center card">
+        <div class="col-12 col-lg-7 order-2 order-lg-1 align-self-center card pt-2 mb-2">
+            <h4>Description</h4>
+            <hr>
             <p>{{ article.description }}</p>
         </div>
-        <div class="col-12 col-lg-5 order-1 order-lg-2 align-self-center card">
+        <div class="col-12 col-lg-5 order-1 order-lg-2 align-self-center card pt-2">
             <h4 class="">{{ article.animal_name }}</h4>
             <h5>{{ article.binomial_name }}</h5>
             <hr>
