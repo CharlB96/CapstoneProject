@@ -50,3 +50,8 @@ Dealt with various issues during develpoment including:
           Tenrec image sourced from https://www.flickr.com/photos/hakoar/7814268658
           Placeholder-map sourced from https://www.tor.com/2017/08/01/tolkiens-map-and-the-messed-up-mountains-of-middle-earth/
           Maps sourced from https://gisgeography.com/
+          Tibetan Fox image sourced from https://safeworldwide.org/species-in-peril/tibetan-fox/
+          Other animal images sourced from related wikipedia articles
+          Background image sourced from https://www.pexels.com/search/rainforest/
+
+- Information: All information sourced from wikipedia, in the actual site, the information would be from multiple sources and written transformatively

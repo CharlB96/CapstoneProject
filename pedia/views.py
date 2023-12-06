@@ -38,6 +38,9 @@ def add_article(request):
         messages.error(request, 'You must be logged in to submit an article.')
         return redirect('login')
 
+    if not request.user.is_staff:
+        messages.error(request, 'You do not have permission to add an article.')
+
     if request.method == "POST":
         article_form = AddArticleForm(request.POST, request.FILES)
         if article_form.is_valid():
@@ -47,7 +50,8 @@ def add_article(request):
             messages.success(request, 'Article submitted and awaiting approval')
             return redirect('article_view')
         else:
-            messages.add_message(request, messages.ERROR, 'Error adding article')
+            messages.error(request, 'Error adding article')
+            return redirect('article_view')
     else:
         article_form = AddArticleForm()
 

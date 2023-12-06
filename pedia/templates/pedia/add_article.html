@@ -17,7 +17,11 @@
                     <button id="submitButton" type="submit" class="btn btn-success btn-lg">Submit</button>
                 </form>
                 {% else %}
-                <p>Become an admin to submit an article</p>
+                <h3>Become an admin to submit an article</h3>
+                <p>Contact us directly to request admin privillages</p>
+                <a href="https://outlook.com/">Email us here</a>
+                <hr>
+                <a href="{% url 'article_view' %}" class="btn btn-primary">Back to Articles</a>
                 {% endif %}
             </div>
         </div>
