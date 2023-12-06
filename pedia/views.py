@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Article
 from .forms import AddArticleForm
 from django.contrib import messages
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def article_view(request):
@@ -9,6 +10,17 @@ def article_view(request):
     View to display articles
     """
     article_items = Article.objects.filter(approved=True)
+    items_per_page = 8
+    paginator = Paginator(article_items, items_per_page)
+    page = request.GET.get('page')
+
+    try:
+        article_items = paginator.page(page)
+    except PageNotAnInteger:
+        article_items = paginator.page(1)
+    except EmptyPage:
+        article_items = paginator.page(paginator.num_pages)
+
     return render(request, 'pedia/pedia.html', {'article_items': article_items})
 
 def article_detail(request, article_id):

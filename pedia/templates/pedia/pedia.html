@@ -31,6 +31,36 @@
         </div>
         {% endfor %}
     </div>
+
+    <!-- Pagination controls -->
+    <div class="row mt-4">
+        <div class="col d-flex justify-content-center">
+            <ul class="pagination">
+                {% if article_items.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1">&laquo;&laquo;</a></li>
+                <li class="page-item"><a class="page-link"
+                        href="?page={{ article_items.previous_page_number }}">Previous</a></li>
+                {% endif %}
+
+                {% for num in article_items.paginator.page_range %}
+                {% if article_items.number == num %}
+                <li class="page-item active"><span class="page-link">{{ num }} <span
+                            class="sr-only">(current)</span></span></li>
+                {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                {% endif %}
+                {% endfor %}
+
+                {% if article_items.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ article_items.next_page_number }}">Next</a>
+                </li>
+                <li class="page-item"><a class="page-link"
+                        href="?page={{ article_items.paginator.num_pages }}">&raquo;&raquo;</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col d-flex justify-content-center">
             <a href="{% url 'add_article' %}" class="btn btn-success butt">Add Article</a>
