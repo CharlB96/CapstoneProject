@@ -29,6 +29,7 @@ def article_detail(request, article_id):
     """
     article = get_object_or_404(Article, id=article_id)
     return render(request, 'pedia/article_detail.html', {'article': article})
+    
 
 def add_article(request):
     """
@@ -40,6 +41,7 @@ def add_article(request):
 
     if not request.user.is_staff:
         messages.error(request, 'You do not have permission to add an article.')
+        return redirect('article_view')
 
     if request.method == "POST":
         article_form = AddArticleForm(request.POST, request.FILES)
@@ -51,7 +53,7 @@ def add_article(request):
             return redirect('article_view')
         else:
             messages.error(request, 'Error adding article')
-            return redirect('article_view')
+
     else:
         article_form = AddArticleForm()
 
@@ -66,20 +68,13 @@ def edit_article(request, article_id=None):
         messages.error(request, 'You must be at least an admin to edit an article.')
         return redirect('login')
 
-    if article_id:
-        article = get_object_or_404(Article, id=article_id)
-        if article.user != request.user:
-            messages.error(request, 'You do not have permission to edit this article.')
-            return redirect('article_view')
-        else:
-            article_form = AddArticleForm(request.POST or None, request.FILES or None, instance=article)
-    else:
-        article = Article()
-        article_form = AddArticleForm(request.POST or None, request.FILES or None, instance=article)
+    article = get_object_or_404(Article, id=article_id) if article_id else Article()
 
-    new_image = request.FILES.get('image')
-    if new_image:
-        article.image = new_image
+    if article.user != request.user and not request.user.is_staff:
+        messages.error(request, 'You do not have permission to edit this article.')
+        return redirect('article_view')
+
+    article_form = AddArticleForm(request.POST or None, request.FILES or None, instance=article)
 
     if request.method == "POST":
         if article_form.is_valid():
@@ -89,7 +84,7 @@ def edit_article(request, article_id=None):
             messages.success(request, 'Article updated successfully')
             return redirect('article_detail', article_id=article.id)
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating article')
+            messages.error(request, 'Error updating article')
 
     return render(request, 'pedia/add_article.html', {'article_form': article_form})
 
