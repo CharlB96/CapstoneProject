@@ -55,3 +55,7 @@ Dealt with various issues during develpoment including:
           Background image sourced from https://www.pexels.com/search/rainforest/
 
 - Information: All information sourced from wikipedia, in the actual site, the information would be from multiple sources and written transformatively
+
+- Validation:
+        The large amount of warnings are all due to bootstrap classes
+        ![Image showing no issues with css validation](image.png)
