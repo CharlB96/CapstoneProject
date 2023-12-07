@@ -7,6 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Suggestion
 from .forms import SuggestionForm
 
+
 class AddSuggestion(LoginRequiredMixin, CreateView):
     """ Add suggestion view """
     template_name = "suggestion/suggestion.html"

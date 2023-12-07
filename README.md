@@ -295,30 +295,6 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 ## Testing
 
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
-<!-- ## Testing and validation
-
-Validation:
-- CSS validation, the large amount of warnings are all due to bootstrap classes and --webkit issues.
-
-
-- HTML validation:
-        ![Image showing no issues with css validation](documentation/images/image.png)
-
-
-## Home page validation
-
-
-
-Testing:
- - Testing of the views was done consistently throughout. When signed out, only the home, login, register, and inactive newsletter pages are visible. When logged in, the home, suggestion, 'lets see them animals', log out and inactive newsletter pages are active.
- - When accessing the articles page, the add article button is visible whether logged in or not, however, if you try to press the button and are not logged in, an error will appear saiyng you need to be at least an admin to add an aarticle and you will be taken back to the articles page.
-- When logged in (as staff) the add article button takes you to a form with all the relevant fields to fill in, the same goes for the edit button on the article_details page. 
-- Also, as astaff, the delete article button is visible on the article detail pages, so long as it is a page you created, you can delete it. 
- - The suggestion page has a simple input section to name an animal and the reason for wanting it on the website. When a suggestion is entered, the form empties and a success message appears at the top of the page, a warning message appears when any issues occur. The suggestion is then viewable through the admin page and can be read by the superuser to then implement the new article if they choose to
-         
-- The model tests were done manually through the terminal using python3 manage.py shell, the transcript was then placed in this doc:
-        https://docs.google.com/document/d/1fxGQ2t37Pz854mK3BgLMoRH8PplrdpIK7yQzlYmHDnU/edit?usp=sharing -->
-
 
 ## Deployment
 

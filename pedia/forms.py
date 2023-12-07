@@ -1,6 +1,7 @@
 from .models import Article
 from django import forms
 
+
 class AddArticleForm(forms.ModelForm):
     class Meta:
         model = Article
@@ -26,6 +27,5 @@ class AddArticleForm(forms.ModelForm):
                 self.fields['image'].initial = self.instance.image.url
                 self.fields['image'].required = False
             else:
-                self.fields['image'].required = True   
+                self.fields['image'].required = True
                 self.fields['image'].initial = 'default_image_url'
-
