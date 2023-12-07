@@ -186,11 +186,21 @@ The article detail pages show the extra information about the animal that you cl
 
 #### Add article (top)
 
+This page allows authorised users (staff) to add articles wwhich can then be appreoved in the admin page
+
 ![Add article page](documentation/images/add-top.png)
 
 #### Add article (bottom)
 
+This page allows authorised users (staff) to add articles wwhich can then be appreoved in the admin page
+
 ![Add article page](documentation/images/add-bottom.png)
+
+#### Edit article
+
+This page allows authorised users (staff) to edit articles wwhich do not require approval. As you can see, it is not disimilar to the add article form, however the form is already filled in with information pertaining to the article clicked on
+
+![Edit article page](documentation/images/edit.png)
 
 
 ## Frameworks, Libraries & Progams Used
