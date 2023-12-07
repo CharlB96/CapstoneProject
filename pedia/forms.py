@@ -28,3 +28,4 @@ class AddArticleForm(forms.ModelForm):
             else:
                 self.fields['image'].required = True   
                 self.fields['image'].initial = 'default_image_url'
+

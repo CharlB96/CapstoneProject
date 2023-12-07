@@ -9,7 +9,7 @@
         <div class="col-12 card mb-5 mt-5">
             <div class="card-body">
                 Debug Info: {{ article_form.instance.pk }}
-                <h3>{% if article_form.instance.pk %}Edit article{% else %}Add article{% endif %}</h3>
+                <h3>Edit article</h3>
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ article_form | crispy }}

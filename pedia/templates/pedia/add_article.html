@@ -9,7 +9,11 @@
         <div class="col-12 card mb-5 mt-5">
             <div class="card-body">
                 {% if user.is_staff %}
+                {% if article_form.instance.pk %}
+                <h3>Edit article:</h3>
+                {% else %}
                 <h3>Add an article:</h3>
+                {% endif %}
                 <p>Posting as: {{ user.username }}</p>
                 <form id="articleForm" enctype="multipart/form-data" method="post">
                     {{ article_form | crispy }}
@@ -19,7 +23,7 @@
                 {% else %}
                 <h3>Become an admin to submit an article</h3>
                 <p>Contact us directly to request admin privillages</p>
-                <a href="https://outlook.com/">Email us here</a>
+                <a href="{% url 'suggestion' %}">Make a suggestion instead</a>
                 <hr>
                 <a href="{% url 'article_view' %}" class="btn btn-primary">Back to Articles</a>
                 {% endif %}

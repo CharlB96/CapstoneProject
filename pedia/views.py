@@ -17,8 +17,7 @@ def article_view(request):
             Q(animal_name__icontains=query) | 
             Q(binomial_name__icontains=query) |
             Q(location__icontains=query) |
-            Q(diet__icontains=query) |
-            Q(description__icontains=query),
+            Q(diet__icontains=query),
             approved=True
         )
         
@@ -79,7 +78,7 @@ def add_article(request):
     return render(request, 'pedia/add_article.html', {'article_form': article_form})
 
 
-def edit_article(request, article_id=None):
+def edit_article(request, article_id):
     """
     View to add or edit an article
     """
@@ -92,6 +91,7 @@ def edit_article(request, article_id=None):
     if article.user != request.user and not request.user.is_staff:
         messages.error(request, 'You do not have permission to edit this article.')
         return redirect('article_view')
+
 
     article_form = AddArticleForm(request.POST or None, request.FILES or None, instance=article)
 
@@ -109,7 +109,7 @@ def edit_article(request, article_id=None):
 
 
 
-def delete_article(request, article_id=None):
+def delete_article(request, article_id):
     """
     View for deleting articles
     """
