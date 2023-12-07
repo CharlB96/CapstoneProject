@@ -454,20 +454,6 @@ Future plans:
 - I would want to create a profile page where you can save articles of your favourtite animals and personalise the page somewhat.
 
 
-### Existing bugs
-
-- Minor issue with articles page where cards overlap around the 760px to 560px width screens, fixing the issue results in the cards being different sizes and distorting the intended design outlook
-
-### Solved Bugs
-
-Dealt with various issues during develpoment including:
-- App non functioning; forgot to place new app into installed apps section of settings.py
-- Issue loading page; forgot to migrate after changing model
-- Difficulty getting responsiveness; had to experiment with bootstrap classes until it was right
-- Images not uploading when using form; added request.FILES to view
-- Internal server error when deploying to heroku; commented out the STATIC_FILE_STORAGE in settings.py
-- Edit article page was titled 'add an article' despite it being hardcoded to say 'edit article'; Coded an if statement onto the add article templte which seemed to work.
-
 ### Media references
 
 - Logo: Logo created using logo maker on YourLogo.com
