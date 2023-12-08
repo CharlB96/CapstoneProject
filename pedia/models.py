@@ -19,9 +19,7 @@ class Article(models.Model):
     description = models.TextField(null=False, blank=False)
     post_date = models.DateTimeField(auto_now=True)
     map = CloudinaryField('map', default='placeholder-map')
-    map_alt = models.CharField(
-        max_length=50, null=False, blank=False, default="map"
-        )
+    map_alt = models.CharField(max_length=50, null=False, blank=False,)
     approved = models.BooleanField(default=False)
 
     class Meta:
