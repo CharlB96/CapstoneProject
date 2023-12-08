@@ -444,14 +444,16 @@ You can fork this repository by using the following steps:
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner Emma for supporting me through this educational experience.
+- I would like to thank my partner Emma for supporting me through this educational experience
 - ChatGPT was used throughout to identify issues in the code (Spelling mistakes, Structrual issues, etc) (https://chat.openai.com/)
 - Wikipedia was used for animal information in the articles, along with many of the images (https://www.wikipedia.org/)
+- I would like to thank my cohort on my course for being a welcoming and supportive environment for everyone involved
 
-Future plans:
+### Future plans
 - The site could definitely use some expanding in the number of articles made, as well as the amount of information on each animal. Due to time constraints, I created a few articles with limited information, the majority of which was sourced directly from wikipedia. I would want to create fully unique articles per animal and structure the pages with rich text fields to add a bit more style.
 - I would want to fully construct the newsletter page and the newsletter itself, possibly to open onto a new page.
 - I would want to create a profile page where you can save articles of your favourtite animals and personalise the page somewhat.
+- I would want to implement a modal on the delete article button as it would be less intrusive
 
 
 ### Media references

@@ -25,7 +25,7 @@ def article_view(request):
             messages.warning(request, 'No results found for the search query.')
 
     else:
-        article_items = Article.objects.filter(approved=True)
+        article_items = Article.objects.filter(approved=True).order_by('animal_name')
 
     items_per_page = 8
     paginator = Paginator(article_items, items_per_page)

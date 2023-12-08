@@ -85,9 +85,54 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Article detail | ![Lighthouse audit mobile article detail](documentation/images/lighthousemad.png) | ![Lighthouse audit desktop article detail](documentation/images/lighthousedad.png) | Slow response time due to images not having distinct sizes |
 
 
+## CRUD functionality and defensive programming
+
+| Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| Home | | | | |
+| | Click on Logo | Redirection to Home page | Pass | |
+| | Click on Home link in navbar | Redirection to Home page | Pass | Home page is visually different depending on being logged in or not |
+| Suggestion | | | | |
+| | Click on suggestion link in navbar | Redirection to suggestion page | Pass | |
+| | Make suggestion | suggestion appears in admin page confirmation appears at top of page | Pass | |
+| Articles page (Lets see them animals) | | | | |
+| | Click on 'Lets see them animals' link in navbar | Redirection to articles page | Pass | |
+| | Load articles | all articles appear and successfully paginate | Pass | |
+| Sign Up | | | | |
+| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Enter valid password (twice) | Field will only accept password format | Pass | |
+| | Click on Sign Up button | User registered, redirected to logged in home page | Pass | |
+| Log In | | | | |
+| | Click on the Login link | Redirection to Login page | Pass | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Enter valid password | Field will only accept password format | Pass | |
+| | Click Login button | Redirects user to home page | Pass | |
+| Log Out | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Article detail page | | | | |
+| | Click on 'click here to find out more' on article | Links to article detail page of relevant article | Pass | |
+| | Click on delete article (Delete button does not appear if not staff) | Warning appears asking whether you want to delete the article | Pass | This would preferably be a modal but i was having trouble getting it to work |
+| | Click on delete confirmation | Redirected to articles page, article is removed, confirmation message appears at top of page | Pass | |
+| Add article | | | | |
+| | Click on article | Redirects to add article form (Refuses permission if not staff) | Pass | |
+| | Fill out and click submit | Redirects to articles page (Does not allow submission with empty fields except images) submission message appears at top of page "Article submitted and awaiting approval" | Pass | Article is viewable in the admin page, when approved section is ticked and saved, the article appears in the articles page |
+| Edit article | | | | |
+| | Click on edit article | Links to edit article form (Refuses permission when logged out), which is filled in with the information currently in the article | Pass | Current image field empty, but original image is not removed on submit unless changed |
+| | Fill out form and click submit | Redirects to relevent article detail page with contents edited | Pass | |
+| Search bar | | | | |
+| | Type animal into search bar | Redirects to article page showing relevent results (Shows no results if not logged in with warning message) | Pass | |
+| | Type diet type into search bar | Redirects to article page showing relevent results (Shows no results if not logged in with warning message) | Pass | |
+| Newsletter | | | | |
+| | Click on newsletter on navbar | Nothing happens as the button is deactivated | Pass | |
+
+
+
 ### Existing bugs
 
 - Minor issue with articles page where cards overlap around the 760px to 560px width screens, fixing the issue results in the cards being different sizes and distorting the intended design outlook
+- Current image fields on edit article form are empty, but the data is remembered and the image remains the same unless changed
 
 ### Solved Bugs
 
